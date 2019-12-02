@@ -1,11 +1,12 @@
 ﻿import $ from 'jquery';
-$(document).ready(function test123 () {
-	
+
+export function headerjs() {
+
 	var screen_w=window.innerWidth;
 	//var screen_h=window.innerHeight;
 	var MobileWidth=768;
 	var IsMobile=false;
-	
+
 	if(screen_w<=MobileWidth){
 		IsMobile=true;
 	}else{
@@ -48,9 +49,9 @@ $(document).ready(function test123 () {
 			}
 		});
 	}
-	
-	
-	
+
+
+
 	$(".menu_list .menu_item").hover(function(){
 		if(!IsMobile){ //如果是PC
 			if(!$(".wrap_head").hasClass("submenu_show")){
@@ -74,7 +75,7 @@ $(document).ready(function test123 () {
 			return false;
 		}
 	});
-	
+
 	function setMenuHook(){
 		if(!IsMobile){ //如果是PC
 			$(".menu_item").append("<span class='menu_hook'></span>");
@@ -89,12 +90,12 @@ $(document).ready(function test123 () {
 		}
 	}
 	setMenuHook();
-	
-	
+
+
 	//优化交互方案，用before伪类，横向平铺，让子菜单不用只触发到菜单项才展开 .menu_list .menu_item .txt:before
-	
+
 	//桌面连接模块
-	
+
 	$(".link_area .tab_list li").on("mouseenter",function(){
 		if(!$(this).hasClass("current")){
 			$(".link_area .tab_list li").removeClass("current");
@@ -102,21 +103,21 @@ $(document).ready(function test123 () {
 			$(".link_area .con").hide();
 			$(".link_area .con_"+$(this).data("num")).fadeIn();
 		}
-		
+
 	});
-	
+
 	$('.mod-tab').height();
 	$(window).resize(function(){
 		//modHeight = $('.mod-tab').height();
 		screen_w=window.innerWidth;
 		//screen_h=window.innerHeight;
-		
+
 		if(screen_w<=MobileWidth){
 			IsMobile=true;
 		}else{
 			IsMobile=false;
 		}
-		
+
 		//setDevelopSize();
 		if(screen_w >768){
 			$(".menu_list").css({
@@ -130,10 +131,10 @@ $(document).ready(function test123 () {
 			});
 		}
 	});
-	
-	
-	
-	
+
+
+
+
 	//移动端菜单
 	$(".icon_menu .i_menu").click(function(){
 		$(".menu_list").css({
@@ -145,15 +146,15 @@ $(document).ready(function test123 () {
 		$(".icon_menu .i_menu").hide();
 		$(".wrap_head .bg_hover").show();
 	});
-	
+
 	$(".icon_menu .i_close").click(function(){
 		MenuHide();
 	});
-	
+
 	$(".wrap_head .bg_hover").click(function(){
 		MenuHide();
 	});
-	
+
 	function MenuHide(){
 		$(".menu_list").css({
 			"transform":"translate(-260px,0)",
@@ -164,23 +165,23 @@ $(document).ready(function test123 () {
 		$(".wrap_head .bg_hover").hide();
 		$(".search_area").show();
 	}
-	
+
 	//移动端搜索
 	$(".search_icon").click(function(){
 		$(".wrap_head").addClass("search_area_show");
 		$(".icon_menu").hide();
 		$(".search_area .ipt_search").show().focus();
 	});
-	
+
 	$(".search_area .ipt_search").blur(function(){
 		$(".wrap_head").removeClass("search_area_show");
 		$(".icon_menu").show();
 		$(".search_area .ipt_search").hide();
 	});
-	
-	
-	
-	
+
+
+
+
 	//移动端页脚
 	$(".join_us .tit_area").click(function(){
 		if($(this).parent().hasClass("sublist_show")){
@@ -189,7 +190,7 @@ $(document).ready(function test123 () {
 			$(this).parent().addClass("sublist_show");
 		}
 	});
-	
+
 	$(".contact_us .tit_area").click(function(){
 		if($(this).parent().hasClass("sublist_show")){
 			$(this).parent().removeClass("sublist_show");
@@ -197,7 +198,7 @@ $(document).ready(function test123 () {
 			$(this).parent().addClass("sublist_show");
 		}
 	});
-	
+
 	$(".legal_info .tit_area").click(function(){
 		if($(this).parent().hasClass("sublist_show")){
 			$(this).parent().removeClass("sublist_show");
@@ -216,22 +217,22 @@ $(document).ready(function test123 () {
 		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
 			$('.video1').hide();
 			$('.banner_txt').addClass('animation');
-			} else if (u.indexOf('iPhone') > -1) {//苹果手机
-				document.addEventListener("WeixinJSBridgeReady", function () { 
-					$('#video')[0].play()
-				}, false);
-				} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
-					$('.video1').hide();
-					$('.banner_txt').addClass('animation');
-			}
+		} else if (u.indexOf('iPhone') > -1) {//苹果手机
+			document.addEventListener("WeixinJSBridgeReady", function () {
+				$('#video')[0].play()
+			}, false);
+		} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+			$('.video1').hide();
+			$('.banner_txt').addClass('animation');
+		}
 
-		
+
 
 		$('.video1')[0].onplaying = function (){
 			$('.banner_txt').addClass('animation');
 			isBanner = true;
 		}
-		
+
 
 		setInterval(function (){
 			if(isBanner){
@@ -243,7 +244,7 @@ $(document).ready(function test123 () {
 					$('.banner_txt .hook_area').removeClass('animation3');
 					$('.banner_txt .hook_area').removeClass('animation4');
 				}
-				
+
 				if($('.video1')[0].currentTime > 2.7){
 					isBannerI = 1;
 					$('.banner_txt .hook_area').addClass('animation2');
@@ -272,7 +273,7 @@ $(document).ready(function test123 () {
 	// 	}
 	// })
 
-	/* 连接责任与信任banner */ 
+	/* 连接责任与信任banner */
 	var resp_area_banner_time;
 	var resp_area_index = 0;
 	$('.resp_area .slide_area').width();
@@ -301,7 +302,7 @@ $(document).ready(function test123 () {
 		resp_area_banner_time = setInterval(resp_area_banner,4000);
 	})
 
-	/* 连接人才与发展banner */ 
+	/* 连接人才与发展banner */
 	var develop_area_banner_time;
 	var develop_area_index = 0;
 	$('.develop_area .slide_area').width();
@@ -394,7 +395,7 @@ $(document).ready(function test123 () {
 					brandTabOffTop.push(that.offset().top);
 				},100)
 			})
-			
+
 		}else{
 			$('.pc-tab-brand').each(function(){
 				brandTabOffTop.push($(this).offset().top);
@@ -436,7 +437,7 @@ $(document).ready(function test123 () {
 							$('.head_white').addClass('hestate')
 						},20)
 					}
-					
+
 				}
 			}
 
@@ -456,7 +457,7 @@ $(document).ready(function test123 () {
 					scrollNav($('.pc-tab-brand'));
 				}
 			}
-			
+
 		});
 
 		$('.mod-tab li').on('click',function(){
@@ -471,7 +472,7 @@ $(document).ready(function test123 () {
 			},300)
 		})
 	},50)
-	
+
 	function scrollNav(dom){
 		var sections = dom;
 		sections.each(function(index){
@@ -483,8 +484,7 @@ $(document).ready(function test123 () {
 			}
 		})
 	}
-	
-});
+}
 	
 	
 	
