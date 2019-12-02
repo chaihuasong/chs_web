@@ -1,11 +1,8 @@
-﻿$(document).ready(function() {
+﻿import $ from 'jquery';
+$(document).ready(function test123 () {
 	
 	var screen_w=window.innerWidth;
-	var screen_h=window.innerHeight;
-	var center_dot={
-		x:screen_w/2,
-		y:screen_h/2
-	}
+	//var screen_h=window.innerHeight;
 	var MobileWidth=768;
 	var IsMobile=false;
 	
@@ -14,7 +11,7 @@
 	}else{
 		IsMobile=false;
 	}
-		
+
 	//桌面菜单交互
 	// $(".menu_list").hover(function(){
 	// 	if(!IsMobile){ //如果是PC
@@ -44,7 +41,7 @@
 		},function(){
 			if(window.innerWidth >768){
 				$(".wrap_head").addClass("submenu_hide");
-				var timer=setTimeout(function(){
+				setTimeout(function(){
 					$(".wrap_head").removeClass("submenu_show");
 					$(".wrap_head").removeClass("submenu_hide");
 				},150);
@@ -68,7 +65,7 @@
 		if(!IsMobile){ //如果是PC
 			$(this).addClass("sublist_hide");
 			var that=this;
-			var timer=setTimeout(function(){
+			setTimeout(function(){
 				$(that).removeClass("sublist_show");
 				$(that).removeClass("sublist_hide");
 				$(that).children(".sub_list").hide();
@@ -108,37 +105,11 @@
 		
 	});
 	
-	//人才发展模块
-	function setDevelopSize(){
-		if(!IsMobile){ //如果是PC
-			$(".develop_area").css({
-				"height":(screen_w*780/1440)+"px"
-			});
-
-			$(".develop_area .slide_list img").css({
-				"width":screen_w+"px",
-				"height":(screen_w*780/1440)+"px"
-			});
-		}else{
-			$(".develop_area").css({
-				"height":"auto"
-			});
-			$(".develop_area .slide_list img").attr("style","");
-		}
-	}
-	
-	//setDevelopSize();
-	
-	var modHeight = $('.mod-tab').height();
+	$('.mod-tab').height();
 	$(window).resize(function(){
-		modHeight = $('.mod-tab').height();
+		//modHeight = $('.mod-tab').height();
 		screen_w=window.innerWidth;
-		screen_h=window.innerHeight;
-		
-		center_dot={
-			x:screen_w/2,
-			y:screen_h/2
-		}
+		//screen_h=window.innerHeight;
 		
 		if(screen_w<=MobileWidth){
 			IsMobile=true;
@@ -247,7 +218,7 @@
 			$('.banner_txt').addClass('animation');
 			} else if (u.indexOf('iPhone') > -1) {//苹果手机
 				document.addEventListener("WeixinJSBridgeReady", function () { 
-					   $('#video')[0].play()
+					$('#video')[0].play()
 				}, false);
 				} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
 					$('.video1').hide();
@@ -304,7 +275,7 @@
 	/* 连接责任与信任banner */ 
 	var resp_area_banner_time;
 	var resp_area_index = 0;
-	var resp_area_width = $('.resp_area .slide_area').width();
+	$('.resp_area .slide_area').width();
 	var resp_area_len = $('.resp_area .slide_list li').length;
 	function resp_area_banner(l){
 		if(l){
@@ -318,7 +289,7 @@
 		$('.resp_area .slide_list li').removeClass('active');
 		$('.resp_area .slide_list li').eq(resp_area_index).addClass('active');
 	}
-	var resp_area_banner_time = setInterval(resp_area_banner,4000);
+	setInterval(resp_area_banner,4000);
 
 	$('.resp_area .slide_area .icon_arrow').on('click',function(){
 		clearInterval(resp_area_banner_time);
@@ -333,7 +304,7 @@
 	/* 连接人才与发展banner */ 
 	var develop_area_banner_time;
 	var develop_area_index = 0;
-	var develop_area_width = $('.develop_area .slide_area').width();
+	$('.develop_area .slide_area').width();
 	var develop_area_len = $('.develop_area .slide_list li').length;
 	function develop_area_banner(l){
 		if(l!=undefined){
@@ -347,7 +318,7 @@
 		$('.develop_area .slide-tab .li').removeClass('active');
 		$('.develop_area .slide-tab .li').eq(develop_area_index).addClass('active');
 	}
-	var develop_area_banner_time = setInterval(develop_area_banner,5000);
+	setInterval(develop_area_banner,5000);
 
 	$('.develop_area .slide-tab .li').on('click',function(){
 		clearInterval(develop_area_banner_time);
@@ -431,7 +402,7 @@
 		}
 
 		var showHeadState = true;
-		$(window).scroll(function(event){
+		$(window).scroll(function(){
 			p = $(this).scrollTop();
 			if(t<=p){
 				//向下滚
@@ -503,7 +474,7 @@
 	
 	function scrollNav(dom){
 		var sections = dom;
-		sections.each(function(index,el){
+		sections.each(function(index){
 			var _this = $(this);
 			if( _this.offset().top <=  $(document).scrollTop()){
 				$('.mod-tab .line').stop().animate({'left':$('.mod-tab li').eq(index).position().left+'px','width': $('.mod-tab li').eq(index).width()},200);
