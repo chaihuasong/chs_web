@@ -97,6 +97,26 @@
 		font-size: 30px;
 	}
 }
+.bg_hover{ display:none; height: 100%; width: 100%; position: fixed; left: 0px; top: 0px; background: rgba(0,0,0,0.2); z-index: 98;}
+
+.banner_area{ height:640px;}
+.banner_bg{ height: 100%; background:#000 url(../imgs/banner_bg.jpg) no-repeat center top; background-size: cover; position: absolute; left:0px; top: 0px;}
+.banner_txt{ width: 214px; height:130px;letter-spacing: 10px}
+.banner_txt .hook_area{  left: auto; top: -25px; right: 9px;width:96px;height: 60px;top: -9px;}
+.banner_txt .hook_area .word{font-size: 38px;line-height: 50px;width: auto;height: 49px;}
+.video1{
+	height: 640px;
+}
+.slide_tips{
+	bottom: 30px;
+}
+.details_con{
+	height: auto;
+}
+.details_area{
+	margin-bottom: 46px;
+	overflow: hidden;
+}
 
 @media screen and (max-width: 1400px){
 	.resp_area{
