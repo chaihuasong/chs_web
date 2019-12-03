@@ -87,15 +87,6 @@
 	.link_area .tab_list .txt{
 		font-size: 14px;
 	}
-	.en-us .link_area .tab_list .list_item_1 .txt{
-		top: 60%;
-	}
-	.en-us .link_area .tab_list li.list_item_2 .txt{
-		top: 62%;
-	}
-	.en-us .link_area .tab_list li.list_item_3 .txt{
-		top: 62%;
-	}
 	.link_area .link_con_list .script .tit{
 		font-size: 20px;
 	}
@@ -105,20 +96,6 @@
 	.resp_area .resp_details .tit{
 		font-size: 30px;
 	}
-
-	.en-us .menu_list .menu_item{
-		margin-left: 40px;
-	}
-
-	/* .en-us .link_area .tab_list .icon{
-		margin-top: 26.6%;
-	}
-	.en-us .link_area .tab_list li.list_item_2 .icon{
-		margin-top: 24.6%;
-	}
-	.en-us .link_area .tab_list li.list_item_3 .icon{
-		margin-top: 18.8%;
-	} */
 }
 
 @media screen and (max-width: 1400px){
@@ -809,7 +786,7 @@
 		padding-bottom: 56px;
 	}
 	.head_con .logo{ display:block; height: 18px; width: 137px; position: absolute; left: 50%; top: 19px; margin-left: -68px;}
-	.head_con .logo h1{ display:block; height: 18px; width: 137px; background: url( ../imgs/changsoon_logo.png) no-repeat 0 0; background-size: contain;}
+	.head_con .logo h1{ display:block; height: 18px; width: 137px; background: url( ../imgs/menu_logo.png) no-repeat 0 0; background-size: contain;}
   .head_white .logo h1{ background-image: url(../imgs/menu_logo_hover.png);}
 	.search_area{ height: 30px; width: 30px; position:absolute; right: 11px; top: 11px; border:1px solid rgba(255,255,255,0); overflow-x: hidden;}
 	.en-us .search_area{
@@ -838,64 +815,6 @@
 		margin-top: 0;
 	}
 
-  .icon_menu .i_close{ display:none; height:14px; width: 15px; background: url( ../imgs/icon_menu_close.png) no-repeat 0 0; background-size: contain; position: fixed; left:21px; top: 21px; z-index: 4; }
-	.menu_list{ display: block; position: fixed; background: #fff; width:260px;  height:100%; right: 0px; left: 0px; padding-top: 90px; z-index: 3; transform: translate(-260px,0); opacity: 0.8; transition: transform 0.25s ease-out, opacity 0.25s ease-out;}
-	.menu_list .menu_item{ display:block; float: none; height: 63px; margin-left: 58px;}
-	.en-us .menu_list .menu_item{ display:block; float: none; height: 63px; margin-left: 58px;}
-	.menu_list .menu_item .txt{ color:#2a2e2e; font-weight: normal;}
-	.menu_list .menu_item .txt:hover:after{ display:none;}
-
-	.lang_area{ display:none;}
-	.menu_list .menu_item.menu_item_lan{ display:block; position: absolute; bottom: 87px; line-height: 63px;}
-	.menu_list .menu_item.menu_item_lan a{  color:#2a2e2e; font-size: 16px;}
-	.menu_list .menu_item.menu_item_lan .cn,.menu_list .menu_item.menu_item_lan .s_line_1{
-		/* display: none; */
-	}
-	.menu_list .menu_item.menu_item_lan .en,.menu_list .menu_item.menu_item_lan .s_line_2{
-		display: inline-block !important;
-	}
-	.menu_list .menu_item.menu_item_lan .s_line{  color:#878a8a; font-size: 16px; margin: 0px 8px;font-style: normal;}
-	.bg_hover{ display:none; height: 100%; width: 100%; position: fixed; left: 0px; top: 0px; background: rgba(0,0,0,0.2); z-index: 98;}
-
-	.banner_area{ height:640px;}
-	.banner_bg{ height: 100%; background:#000 url(../imgs/banner_bg.jpg) no-repeat center top; background-size: cover; position: absolute; left:0px; top: 0px;}
-	.banner_txt{ width: 214px; height:130px;letter-spacing: 10px}
-	.banner_txt .hook_area{  left: auto; top: -25px; right: 9px;width:96px;height: 60px;top: -9px;}
-	.banner_txt .hook_area .word{font-size: 38px;line-height: 50px;width: auto;height: 49px;}
-	.video1{
-		height: 640px;
-	}
-	.slide_tips{
-		bottom: 30px;
-	}
-	.details_con{
-		height: auto;
-	}
-	.details_area{
-		margin-bottom: 46px;
-		overflow: hidden;
-	}
-
-	@keyframes a_banner_word_m {
-		0%{ -webkit-transform:translate(0,0); opacity: 1;}
-		12.5%{ -webkit-transform:translate(0,0); opacity: 1;}
-		25%{ -webkit-transform:translate(0,-60px); opacity: 0;}
-		25.01%{ -webkit-transform:translate(0,-60px); opacity: 0;}
-		25.02%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		50%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		87.5%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		100%{ -webkit-transform:translate(0,0); opacity: 1;}
-	}
-
-	@keyframes a_banner_word_2_m {
-		0%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		12.5%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		25%{ -webkit-transform:translate(0,0px); opacity: 1;}
-		37.5%{ -webkit-transform:translate(0,0px); opacity: 1;}
-		50%{ -webkit-transform:translate(0,-60px); opacity: 0;}
-		50.01%{ -webkit-transform:translate(0,60px); opacity: 0;}
-		100%{ -webkit-transform:translate(0,60px); opacity: 0;}
-	}
 
 	.banner_txt .txtbox p{
 		font-size: 38px;
@@ -908,62 +827,6 @@
 		float: left;
 		margin-left: 10px;
 	}
-	.en-us .banner_txt{
-		width: 580px;
-		height: 160px;
-		top: 38%;
-		text-align: center;
-	}
-	.en-us .banner_txt .txtbox p{
-		font-size: 30px;
-		line-height: auto;
-		width: 100%;
-		text-align: center;
-	}
-	.en-us .banner_txt .hook_area{
-		width: 100%;
-		text-align: center;
-		height: 60px;
-		left: 0;
-		top: 50px;
-	}
-	.en-us .banner_txt .hook_area .word{
-		height: 45px;
-		font-size: 30px;
-		left: 50%;
-		transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		text-align: center;
-	}
-	.en-us .banner_txt .txtbox .ltxt{
-		margin-bottom: 70px;
-	}
-
-
-	@keyframes m_a_banner_start{
-		0%{ -webkit-transform:translate(-50%,88px); opacity: 1;}
-		100%{ -webkit-transform:translate(-50%,0);  opacity: 1;}
-	}
-
-	@keyframes m_a_banner_end{
-		0%{ -webkit-transform:translate(-50%,0px); opacity: 1;}
-		100%{ -webkit-transform:translate(-50%,-88px); opacity: 1; }
-	}
-
-	.en-us .banner_txt .hook_area.animation1 .word_1{  -webkit-animation: m_a_banner_start 0.2s linear forwards; }
-
-	.en-us .banner_txt .hook_area.animation2 .word_1{  -webkit-animation: m_a_banner_end 0.2s linear forwards; }
-	.en-us .banner_txt .hook_area.animation2 .word_2{  -webkit-animation: m_a_banner_start 0.2s linear forwards; }
-
-	.en-us .banner_txt .hook_area.animation3 .word_2{  -webkit-animation: m_a_banner_end 0.2s linear forwards; }
-	.en-us .banner_txt .hook_area.animation3 .word_3{  -webkit-animation: m_a_banner_start 0.2s linear forwards; }
-
-
-	.en-us .banner_txt .hook_area.animation4 .word_3{  -webkit-animation: m_a_banner_end 0.2s linear forwards; }
-	.en-us .banner_txt .hook_area.animation4 .word_4{  -webkit-animation: m_a_banner_start 0.2s linear forwards; }
 
 	/*页脚*/
 	.wrap_footer{/* background:url(../imgs/bg_2.png) no-repeat 0 0; background-size: contain; height: 376px;*/ height: auto;}
