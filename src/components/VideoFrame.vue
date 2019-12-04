@@ -1,6 +1,13 @@
 <template>
   <div class="wrap_content">
     <div class="banner_area">
+      <div class="demo-image__placeholder">
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-image :src="src"></el-image>
+        </div>
+      </div>
+
       <video width="100%" id="video" autoplay="" loop="" preload="" muted="" x-webkit-airplay="true" airplay="allow" webkit-playsinline="true" playsinline="true" src="http://tencent.com/video/index-video.mp4" class="video1 video"></video>
       <div class="banner_txt">
         <div class="txtbox">
@@ -21,6 +28,11 @@ export default {
   name: 'Header',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      src: 'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg'
+    }
   }
 }
 </script>
