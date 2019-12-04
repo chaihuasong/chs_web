@@ -175,8 +175,9 @@ h6 {
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
 }
-.head_con{ display:block; width:100%; height: 72px;  margin: 0px auto;left: 20%; position: relative; z-index: 2; }
+.head_con{ display:block; width:100%; height: 72px; left: 20%; position: relative; z-index: 2; }
 .head_con .logo{ display:block; height: 22px; width: 168px; position: absolute; left: 0px; top: 25px;}
+.head_con .menu_icon{ display:none;}
 .head_con .logo h1{ display:block; height: 22px; width: 168px; background: url(../imgs/menu_logo.png) no-repeat 0 0; text-indent: -9999px; overflow: hidden;background-size: 100% 100%;}
 
 .head_white{

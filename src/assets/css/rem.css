@@ -797,7 +797,6 @@
         height: 66.6vw;
     }
 	/*页头*/
-	.wrap{ overflow:hidden;}
   .head_con{ width: 100%; z-index: 99;  }
   .wrap_head{
     height: 56px;
