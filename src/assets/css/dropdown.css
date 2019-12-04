@@ -1,0 +1,25 @@
+.el-dropdown-link {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 50px;
+}
+
+.el-dropdown-item {
+    color: #666;
+    font-size: 16px;
+}
+
+.el-dropdown {
+    top: 25px;
+    left: 260px;
+}
+
+@media screen and (max-width: 768px ) {
+    .head_con{left: 5%;}
+    .el-dropdown {
+        top: 25px;
+        left: 200px;
+    }
+}

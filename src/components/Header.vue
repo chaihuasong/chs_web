@@ -144,22 +144,5 @@
 <style scoped>
     @import "../assets/css/base.css";
     @import "../assets/css/rem.css";
-
-    .el-dropdown-link {
-        cursor: pointer;
-        color: #fff;
-        font-weight: bold;
-        font-size: 16px;
-        margin-right: 50px;
-    }
-
-    .el-dropdown-item {
-        color: #666;
-        font-size: 16px;
-    }
-
-    .el-dropdown {
-        top: 25px;
-        left: 280px;
-    }
+    @import "../assets/css/dropdown.css";
 </style>
