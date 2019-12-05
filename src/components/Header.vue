@@ -1,134 +1,58 @@
 <template>
     <div>
-        <el-drawer
-                :visible.sync="drawer"
-                :direction="direction"
-                :with-header="false">
-        </el-drawer>
         <div class="head_con">
             <img class="menu_icon" src="../assets/imgs/icon_menu.png" @click="drawer = true" type="primary" />
             <a class="logo" href="http://changsong.net.cn:88/"><h1>上海常松网络科技有限公司</h1></a>
-            <el-dropdown class="el-dropdown">
-                <span class="el-dropdown-link">简介</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">公司简介</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">愿景及使命</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">发展历程</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-4">
-                        <el-dropdown-item class="el-dropdown-item">业务架构</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-5">
-                        <el-dropdown-item class="el-dropdown-item">管理团队</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-6">
-                        <el-dropdown-item class="el-dropdown-item">企业文化</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-7">
-                        <el-dropdown-item class="el-dropdown-item">办公地点</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown>
-                <span class="el-dropdown-link">业务</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">面向用户</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">面向企业</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">创新科技</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown>
-                <span class="el-dropdown-link">员工</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">人才发展</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">常松网络学院</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">工作环境</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-4">
-                        <el-dropdown-item class="el-dropdown-item">员工活动</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown>
-                <span class="el-dropdown-link">企业责任</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">践行承诺</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">支持善举</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">鼓励创新</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-4">
-                        <el-dropdown-item class="el-dropdown-item">企业社会责任报告</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown>
-                <span class="el-dropdown-link">投资者</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">财务新闻</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">公告及财务报告
-                        </el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">业绩电话会及路演
-                        </el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-4">
-                        <el-dropdown-item class="el-dropdown-item">投资者工具包</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-5">
-                        <el-dropdown-item class="el-dropdown-item">证券及债券信息</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-7">
-                        <el-dropdown-item class="el-dropdown-item">企业管治</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
-            <el-dropdown>
-                <span class="el-dropdown-link">媒体</span>
-                <el-dropdown-menu slot="dropdown">
-                    <a href="http://changsong.net.cn:88/#about-con-1">
-                        <el-dropdown-item class="el-dropdown-item">企业动态</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-2">
-                        <el-dropdown-item class="el-dropdown-item">财务新闻</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-3">
-                        <el-dropdown-item class="el-dropdown-item">常松网络视角</el-dropdown-item>
-                    </a>
-                    <a href="http://changsong.net.cn:88/#about-con-4">
-                        <el-dropdown-item class="el-dropdown-item">媒体资料库</el-dropdown-item>
-                    </a>
-                </el-dropdown-menu>
-            </el-dropdown>
+            <TopMenu/>
         </div>
+        <el-drawer class="el-drawer"
+                   title=""
+                   :visible.sync="drawer"
+                   :direction="direction"
+                   :modal="false"
+                   :modal-append-to-body="false"
+                   size="40%">
+            <el-menu
+                    default-active="2"
+                    @open="handleOpen"
+                    @close="handleClose">
+                <el-submenu index="1">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>导航一</span>
+                    </template>
+                    <el-menu-item-group>
+                        <template slot="title">分组一</template>
+                        <el-menu-item index="1-1">选项1</el-menu-item>
+                        <el-menu-item index="1-2">选项2</el-menu-item>
+                    </el-menu-item-group>
+                    <el-menu-item-group title="分组2">
+                        <el-menu-item index="1-3">选项3</el-menu-item>
+                    </el-menu-item-group>
+                    <el-submenu index="1-4">
+                        <template slot="title">选项4</template>
+                        <el-menu-item index="1-4-1">选项1</el-menu-item>
+                    </el-submenu>
+                </el-submenu>
+                <el-menu-item index="2">
+                    <i class="el-icon-menu"></i>
+                    <span slot="title">导航二</span>
+                </el-menu-item>
+                <el-menu-item index="3" disabled>
+                    <i class="el-icon-document"></i>
+                    <span slot="title">导航三</span>
+                </el-menu-item>
+                <el-menu-item index="4">
+                    <i class="el-icon-setting"></i>
+                    <span slot="title">导航四</span>
+                </el-menu-item>
+            </el-menu>
+        </el-drawer>
     </div>
 </template>
 
 <script>
+    import TopMenu from './TopMenu';
     export default {
         name: 'Header',
         props: {
@@ -141,6 +65,9 @@
             };
         },
         methods: {},
+        components: {
+            TopMenu
+        }
     }
 </script>
 

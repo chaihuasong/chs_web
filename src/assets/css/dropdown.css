@@ -1,6 +1,6 @@
 .el-dropdown-link {
     cursor: pointer;
-    color: #fff;
+    color: #ccc;
     font-weight: bold;
     font-size: 16px;
     margin-right: 50px;
@@ -16,11 +16,18 @@
     left: 260px;
 }
 
-.menu_icon {
+.head_con .menu_icon {
     display: none;
 }
 
 @media screen and (max-width: 768px ) {
+    .el-dropdown-link {
+        color: #0A43C8;
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 50px;
+        left: 0;
+    }
     .head_con{left: 20%;}
     .el-dropdown {
         display: none;
