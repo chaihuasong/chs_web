@@ -5,54 +5,21 @@
             <a class="logo" href="http://changsong.net.cn:88/"><h1>上海常松网络科技有限公司</h1></a>
             <TopMenu/>
         </div>
-        <el-drawer class="el-drawer"
+        <el-drawer class="left_menu"
                    title=""
                    :visible.sync="drawer"
                    :direction="direction"
                    :modal="false"
                    :modal-append-to-body="false"
                    size="40%">
-            <el-menu
-                    default-active="2"
-                    @open="handleOpen"
-                    @close="handleClose">
-                <el-submenu index="1">
-                    <template slot="title">
-                        <i class="el-icon-location"></i>
-                        <span>导航一</span>
-                    </template>
-                    <el-menu-item-group>
-                        <template slot="title">分组一</template>
-                        <el-menu-item index="1-1">选项1</el-menu-item>
-                        <el-menu-item index="1-2">选项2</el-menu-item>
-                    </el-menu-item-group>
-                    <el-menu-item-group title="分组2">
-                        <el-menu-item index="1-3">选项3</el-menu-item>
-                    </el-menu-item-group>
-                    <el-submenu index="1-4">
-                        <template slot="title">选项4</template>
-                        <el-menu-item index="1-4-1">选项1</el-menu-item>
-                    </el-submenu>
-                </el-submenu>
-                <el-menu-item index="2">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">导航二</span>
-                </el-menu-item>
-                <el-menu-item index="3" disabled>
-                    <i class="el-icon-document"></i>
-                    <span slot="title">导航三</span>
-                </el-menu-item>
-                <el-menu-item index="4">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
-            </el-menu>
+            <LeftMenu/>
         </el-drawer>
     </div>
 </template>
 
 <script>
     import TopMenu from './TopMenu';
+    import LeftMenu from './LeftMenu';
     export default {
         name: 'Header',
         props: {
@@ -66,8 +33,10 @@
         },
         methods: {},
         components: {
-            TopMenu
+            TopMenu,
+            LeftMenu
         }
+
     }
 </script>
 

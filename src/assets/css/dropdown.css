@@ -20,6 +20,10 @@
     display: none;
 }
 
+.left_menu {
+    display: none;
+}
+
 @media screen and (max-width: 768px ) {
     .el-dropdown-link {
         color: #0A43C8;
@@ -27,6 +31,9 @@
         font-size: 16px;
         margin-right: 50px;
         left: 0;
+    }
+    .left_menu {
+        display: block;
     }
     .head_con{left: 20%;}
     .el-dropdown {
